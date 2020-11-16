@@ -75,7 +75,7 @@
       <h2>ติดต่อเรา</h2>
       <hr>
     </div>
-    <div class="row">
+    <div class="row mb-4">
       <!-- Map Column -->
       <div class="col-lg-8 mb-4">
         <!-- Embedded Google Map -->
@@ -103,11 +103,50 @@
         </address>   
       </div>
     </div>
-    <div class = "row">
+    <div class="row">
+      <div class="col-lg-8 mb-4">
+        <h3>ส่งข้อความถึงเรา</h3>
+        <br>
+        <form name="sentMessage" id="contactForm" novalidate>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>ชื่อ:</label>
+              <input type="text" class="form-control" id="name" required data-validation-required-message="โปรดใส่ชื่อของท่าน">
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>เบอร์ติดต่อ:</label>
+              <input type="tel" class="form-control" id="phone" required data-validation-required-message="โปรดใส่เบอร์โทรศัพท์สำหรับติดต่อกลับ">
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>email:</label>
+              <input type="email" class="form-control" id="email" required data-validation-required-message="โปรดใส่ email สำหรับติดต่อกลับ">
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>ข้อความ:</label>
+              <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="โปรดใส่ข้อความ" maxlength="999" style="resize:none"></textarea>
+            </div>
+          </div>
+          <div id="success"></div>
+          <!-- For success/fail messages -->
+          <button type="submit" class="btn btn-secondary btn-lg" id="sendMessageButton">ส่ง</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- <div class = "row">
       <div class = "col-lg-8">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2HMdy5nsHN3DgWFT5CqNHQxkGyEbJWhftsN17ApYKxWlXhA/viewform?embedded=true" width ="100%" height = "900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       </div>
-    </div>
+    </div> -->
+
   </div>
   </div>
   <!-- Container -->
@@ -122,6 +161,9 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
 
 </body>
 
